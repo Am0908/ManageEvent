@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Event Management</title>
+</head>
+<body>
+<header>
+    <h1>Event Management</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+<main>
+    <div id="events" class="event-container">
+        <th:block th:each="event : ${events}">
+            <div class="event-card" style="background-image: url('${event.imageStr}');">
+                <div class="event-info">
+                    <h2 th:text="${event.name}"></h2>
+                    <p class="date" th:text="${event.date}"></p>
+                    <p class="location" th:text="${event.location}"></p>
+                </div>
+                <form th:action="@{/register/{eventId}(eventId=${event.id})}" method="post" class="registration-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="tel" name="contactNumber" placeholder="Your Contact" required>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+
+        </th:block>
+    </div>
+</main>
+<footer>
+    <p>&copy; 2024 Event Management. All rights reserved.</p>
+</footer>
+</body>
+</html>

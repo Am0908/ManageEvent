@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color: #404040; /* Deep blue */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    color: #ffffff;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700; /* Gold on hover */
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 80px); /* Adjust based on header height */
+    padding: 20px;
+}
+
+.event-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Optional max width */
+    margin: 0 auto; /* Center the grid */
+}
+
+.event-card {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for readability */
+    background-size: cover; /* Cover the entire card */
+    background-position: center; /* Center the background image */
+    border: 1px solid #d1d1d1; /* Light border */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    padding: 20px; /* Add some padding */
+    position: relative; /* Positioning for absolute children */
+    color: #333; /* Text color for better contrast */
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.event-info {
+    padding: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.event-info h2 {
+    font-size: 1.8em;
+    margin: 0;
+    color: #333; /* Dark grey */
+}
+
+.date, .location {
+    color: #777; /* Softer grey */
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.registration-form {
+    padding: 20px;
+}
+
+.registration-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 22px); /* Adjusting for padding */
+    transition: border-color 0.2s;
+}
+
+.registration-form input:focus {
+    border-color: #0056b3; /* Deep blue on focus */
+    outline: none;
+}
+
+.registration-form button {
+    padding: 10px;
+    background-color: #007bff; /* Lighter blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.registration-form button:hover {
+    background-color: #0056b3; /* Deep blue on hover */
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #333; /* Dark grey */
+    color: #fff;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+
